@@ -9,7 +9,7 @@ import os
 import src.config_loader as config_loader
 from src.llm.openai_client import openai_client
 
-def initialise(config_file, logging_file, secret_key_file, character_df_files, language_file, FO4_XVASynth_file) -> tuple[config_loader.ConfigLoader, pd.DataFrame, dict[Hashable, str], openai_client]:
+def initialise(config_file, logging_file, secret_key_file, character_df_files, faction_df_files, language_file, FO4_XVASynth_file) -> tuple[config_loader.ConfigLoader, pd.DataFrame, pd.DataFrame, dict[Hashable, str], openai_client, pd.DataFrame]:
     
     def set_cwd_to_exe_dir():
         if getattr(sys, 'frozen', False): # if exe and not Python script
@@ -97,9 +97,11 @@ def initialise(config_file, logging_file, secret_key_file, character_df_files, l
     formatted_game_name = config.game.lower().replace(' ', '').replace('_', '')
     if formatted_game_name in ("fallout4", "fallout4vr"):
         character_df_file = character_df_files[1] 
+        faction_df_file = faction_df_files[1] 
         FO4_Voice_folder_and_models_df = get_voice_folders_and_models(FO4_XVASynth_file)
     else :
         character_df_file = character_df_files[0]  # if not Fallout assume Skyrim
+        faction_df_file = faction_df_files[0] 
         FO4_Voice_folder_and_models_df=''
 
     try:
@@ -108,8 +110,15 @@ def initialise(config_file, logging_file, secret_key_file, character_df_files, l
         logging.error(f'Unable to read / open {character_df_file}. If you have recently edited this file, please try reverting to a previous version. This error is normally due to using special characters, or saving the CSV in an incompatible format.')
         input("Press Enter to exit.")
 
+    try:
+        with open(faction_df_file, 'r', encoding='utf-8') as f:
+            faction_df = pd.read_csv(faction_df_file, engine='python', encoding=utils.get_file_encoding(faction_df_file))
+    except:
+        logging.error(f'Unable to read / open {faction_df_file}. If you have recently edited this file, please try reverting to a previous version. This error is normally due to using special characters, or saving the CSV in an incompatible format.')
+        input("Press Enter to exit.")
+
     language_info = get_language_info(language_file)
     
     client = openai_client(config, secret_key_file)
 
-    return config, character_df, language_info, client, FO4_Voice_folder_and_models_df
+    return config, character_df, faction_df, language_info, client, FO4_Voice_folder_and_models_df

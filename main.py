@@ -7,6 +7,7 @@ import time
 import src.output_manager as output_manager
 import src.game_manager as game_manager
 import src.character_manager as character_manager
+import src.faction_manager as faction_manager
 import src.characters_manager as characters_manager
 import src.setup as setup
 from src.conversation.conversation import conversation
@@ -18,12 +19,13 @@ from src.remember.summaries import summaries
 game_state_manager = None
 
 try:
-    config, character_df, language_info, client, FO4_Voice_folder_and_models_df = setup.initialise(
+    config, character_df, faction_df, language_info, client, FO4_Voice_folder_and_models_df = setup.initialise(
         config_file='config.ini',
         logging_file='logging.log', 
         secret_key_file='GPT_SECRET_KEY.txt', 
         #Additional df_file added to support Fallout 4 data/fallout4_characters.csv, keep in mind there's also a new file in data\Fallout4\FO4_Voice_folder_XVASynth_matches.csv
         character_df_files=('data/Skyrim/skyrim_characters.csv', 'data/Fallout4/fallout4_characters.csv'), 
+        faction_df_files=('data/Skyrim/skyrim_factions.csv', 'data/Fallout4/fallout4_factions.csv'),
         language_file='data/language_support.csv',
         FO4_XVASynth_file='data\\Fallout4\\FO4_Voice_folder_XVASynth_matches.csv'
     )
@@ -46,6 +48,7 @@ try:
     transcriber = stt.Transcriber(game_state_manager, config, client.api_key)    
     rememberer: remembering = summaries(config.memory_prompt, config.resummarize_prompt, client, language_info['language'], config.game)
     chat_manager.pygame_initialize()
+    faction_manager.initialize_faction_information(faction_df)
 
     # end any lingering conversations from previous run
     game_state_manager.write_game_info('_mantella_end_conversation', 'True')

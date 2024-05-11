@@ -1,0 +1,27 @@
+name,altnames,factions,description,antifactions
+Bandits,,01BCC0;,a loose group of rogue lawbreakers living a life of plunder,
+Blades,,072834;,an order of warriors that once served the Emperor before being disbanded and nearly exterminated by the Thalmor.,Thalmor
+College of Winterhold,College,01F259;,a guild dedicated to the study and practice of magic based in Winterhold.,
+Companions,,048362;103AFE;,"a guild of mercenaries, dedicated to combat, based in Whiterun.",Silver Hand
+Circle,,048362;103AFE;0FF234;109C71;,the most trusted and accomplished members of the Companions.,Silver Hand
+Dark Brotherhood,Dark Brother;Dark Sister,01BDB3;,a secret guild made up of professional assassins.,
+Dawnguard,,Dawnguard.esm|014217;,an order of vampire hunters.,Volkihar Vampire Clan;Silver Hand
+Imperial Legion,Imperial Government;Empire of Tamriel;Tamrielic Empire;Third Empire;Septim Empire;Septim's Imperium;Holy Cyrodiilic Empire of Tamriel;Glorious Empire;Empire;Imperial,028848;02BF9A;01C9FC;036633;,"the military power of the Empire of Tamriel, they seek to maintain Imperial control of Skyrim from their base in Solitude.",Stormcloak Rebellion
+Stormcloaks,Stormcloak Rebellion;Sons of Skyrim,028849;02BF9B;01C9FD;036634;,"the main organization of rebels in Skyrim's civil war, they seek Skyrim's independence from the Empire. They are based in Windhelm.",Imperial Legion
+Volkihar Vampire Clan,Volkihar;Volkihar Clan;Vampire Clan;Vampires,Dawnguard.esm|017F71;Dawnguard.esm|003376;,a clan of vampires trying to blot out the sun.,Dawnguard;Vigil of Stendarr
+Penitus Oculatus,,02584B;,an Imperial espionage organization responsible for protecting the Emperor; it rose to prominence after the disbandment of the Blades.,
+Thieves Guild,Thieves;Thief,10A794;029DA9;,"a secret guild dedicated to professional thievery, based in Riften.",
+Bards College,Bards,0C13C7;,"a guild of musicians, vocalists and story tellers based in Solitude.",
+Blackblood Marauders,Blackbloods,088EE4;,a group of bandits based out of Broken Oar Grotto.,
+Blood Horkers,Pirates,01BCC0;Dragonborn.esm|024CAB;,a group of pirates based out of Japhet's Folly.,
+Cultists of Miraak,Cultist of Miraak;Cultists,Dragonborn.esm|034FBC;,"worshippers of the fallen Dragon Priest Miraak, also known as the First Dragonborn.",Silver Hand
+Forsworn,,0E3609;,Bretons native to The Reach who want to overthrow the region's Nord rulers.,
+Frostmoon Pack,Frostmoon Werewolves;Frostmoon Werewolf,Dragonborn.esm|01DC61;,a pack of werewolves based at Frostmoon Crag.,
+Greybeards,,10F72B;,a monastic order dedicated to studying and preserving the Way of the Voice.,
+Morag Tong,,Dragonborn.esm|02929A;,a professional guild of assassins lawfully sanctioned in Morrowind.,
+Silver Hand,,0AA0A4;,werewolf hunters that oppose the Companions.,Companions;Circle;Vigil of Stendarr;Dawnguard;Cultists of Miraak
+Skaal,,Dragonborn.esm|018F9A;,an offshoot tribe of Nords who inhabit Skaal Village.,
+Summerset Shadows,,109ACF;,a group of thieves based in Windhelm that steal valuables from the corpses of the dead.,
+Thalmor,,039F26;,"the ruling faction of the Aldmeri Dominion, which seeks to establish elven supremacy over the race of men.",Blades
+Thirsk,,Dragonborn.esm|03D126;Dragonborn.esm|01A514;,a group of former Skaal based out of Thirsk Mead Hall.,
+Vigil of Stendarr,Vigilant of Stendarr;Vigilants of Stendarr,0B3292;,"a militant holy order of Stendarr adherents founded after the Oblivion Crisis, its members are dedicated to hunting Daedra.",Silver Hand;Volkihar Vampire Clan

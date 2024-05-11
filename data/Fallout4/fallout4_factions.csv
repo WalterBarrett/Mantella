@@ -1,0 +1,24 @@
+name,altnames,factions,description,antifactions
+Brotherhood of Steel,Brother of Steel;Sister of Steel,05DE41;,,Institute
+Railroad,,0994F6;,,
+Institute,Commonwealth Institute of Technology;CIT,05E558;,,Brotherhood of Steel
+Commonwealth Minutemen,Minutemen;Commonwealth Minuteman;Commonwealth Minutewoman;Minuteman;Minutewoman,068043;,,Raiders;Forged;Gunners;Triggermen;Disciples;Operators;Pack;Rust Devils
+Atom Cats,,048641;,,
+Gunners,,058303;,,Minutemen;Forged;Triggermen;Disciples;Operators;Pack;Rust Devils
+Forged,,13101D;,,Minutemen;Gunners;Triggermen;Disciples;Operators;Pack;Rust Devils
+Diamond City Security,,002F65;,,
+Enclave,Enclave Remnants,008:ccOTMFO4001-Remnants.esl;,,
+Neighborhood Watch,Watch,0E1ACC;,,
+Church of the Children of Atom,Children of Atom;Child of Atom;Atomites;Rad-eaters,02FB84;004462:DLCCoast.esm;,,
+Commonwealth Raiders,Raiders,01CBED;,,Minutemen;Forged;Gunners;Triggermen;Disciples;Operators;Pack;Rust Devils
+Covenant,,048641;,,
+Triggermen,,083AD0;,,Minutemen;Forged;Gunners;Disciples;Operators;Pack;Rust Devils
+Pillars of the Community,Pillar of the Community;Pillar,0BBF88;,,
+Acadia,,00463D:DLCCoast.esm;,,
+Trappers,,002DB4:DLCCoast.esm;,,
+Harbormen,Harborman;Harborwoman,005C7E:DLCCoast.esm;005C7F:DLCCoast.esm;,,
+Rust Devils,,004385:DLCRobot.esm;,,Minutemen;Forged;Gunners;Triggermen;Disciples;Operators;Pack
+Hubologists,,00CC95:DLCNukaWorld.esm;,,
+Disciples,,00F438:DLCNukaWorld.esm;,,Minutemen;Forged;Gunners;Triggermen;Operators;Pack;Rust Devils
+Operators,,00F439:DLCNukaWorld.esm;,,Minutemen;Forged;Gunners;Triggermen;Disciples;Pack;Rust Devils
+Pack,,00F43A:DLCNukaWorld.esm;,,Minutemen;Forged;Gunners;Triggermen;Disciples;Operators;Rust Devils

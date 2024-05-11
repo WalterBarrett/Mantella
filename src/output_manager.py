@@ -16,6 +16,7 @@ import unicodedata
 import src.utils as utils
 from src.characters_manager import Characters
 from src.character_manager import Character
+import src.faction_manager as faction_manager
 from src.llm.messages import assistant_message, message
 from src.llm.message_thread import message_thread
 from src.llm.openai_client import openai_client
@@ -593,6 +594,15 @@ class ChatManager:
                                     elif keyword_extraction.lower() == self.follow_npc_response.lower():
                                         logging.info(f"The NPC is willing to follow the player")
                                         self.game_state_manager.write_game_info('_mantella_aggro', '2')
+
+                                    elif keyword_extraction.lower().startswith(('join ', 'lead ', 'become ')):
+                                        factionname = faction_manager.sanitize_faction_name(keyword_extraction.lower().replace('join ', '').replace('lead ', '').replace('become ', ''))
+                                        faction_manager.add_to_faction(factionname, self.game_state_manager)
+
+                                    elif keyword_extraction.lower().startswith('leave ') or keyword_extraction.lower().startswith('quit ') or keyword_extraction.lower().startswith('resign from '):
+                                        factionname = faction_manager.sanitize_faction_name(keyword_extraction.lower().replace('leave ', '').replace('quit ', '').replace('resign from ', ''))
+                                        logging.info(f"The NPC is leaving {factionname}")
+                                        faction_manager.remove_from_faction(factionname, self.game_state_manager)
              
                             
                             # Accumulate sentences if less than X words

@@ -91,6 +91,14 @@ class GameStateManager:
         self.write_game_info('_mantella_radiant_dialogue', 'False')
         self.write_game_info('_mantella_audio_ready', 'False')
 
+        self.write_game_info(f'_mantella_join_faction', 'False')
+        for i in range(1, 11):
+            self.write_game_info(f'_mantella_join_faction_{i}', 'False')
+
+        self.write_game_info(f'_mantella_leave_faction', 'False')
+        for i in range(1, 31):
+            self.write_game_info(f'_mantella_leave_faction_{i}', 'False')
+
         return character_name, character_id, location, in_game_time
     
     
